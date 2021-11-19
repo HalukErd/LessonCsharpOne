@@ -6,20 +6,45 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 10; i++)
             {
+                if (i == 4)
+                {
+                    break;
+                }
                 Console.WriteLine(i);
             }
 
-            string[] cars = { "Volvo", "BMW", "Ford", "Mazda" };
-            for (int i = 0; i < cars.Length; i++)
+            for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine(cars[i]);
+                if (i == 4)
+                {
+                    continue;
+                }
+                Console.WriteLine(i);
             }
 
-            foreach (string i in cars)
+            int j = 0;
+            while (j < 10)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(j);
+                j++;
+                if (j == 4)
+                {
+                    break;
+                }
+            }
+
+            j = 0;
+            while (j < 10)
+            {
+                if (j == 4)
+                {
+                    j++;
+                    continue;
+                }
+                Console.WriteLine(j);
+                j++;
             }
         }
     }
