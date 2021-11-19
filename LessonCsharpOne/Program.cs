@@ -17,7 +17,15 @@ namespace HelloWorld
             //% Modulus Returns the division remainder  x % y
             //++  Increment Increases the value of a variable by 1  x++
             //--  Decrement Decreases the value of a variable by 1  x--
+            int x = 0;
+            Console.WriteLine(x);
+            int firstNumber = x++;
+            Console.WriteLine(x);
+            int secondNumber = ++x;
+            Console.WriteLine(x);
 
+            Console.WriteLine(firstNumber);
+            Console.WriteLine(secondNumber);   
             //= x = 5   x = 5
             //+= x += 3  x = x + 3
             //-= x -= 3  x = x - 3
