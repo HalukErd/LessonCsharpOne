@@ -6,21 +6,21 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            int i = 0;
-            while (i < 5)
+            for (int i = 0; i < 5; i++)
             {
                 Console.WriteLine(i);
-                i++;
             }
 
-
-            int j = 0;
-            do
+            string[] cars = { "Volvo", "BMW", "Ford", "Mazda" };
+            for (int i = 0; i < cars.Length; i++)
             {
-                Console.WriteLine(j);
-                j++;
+                Console.WriteLine(cars[i]);
             }
-            while (j < 5);
+
+            foreach (string i in cars)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }
