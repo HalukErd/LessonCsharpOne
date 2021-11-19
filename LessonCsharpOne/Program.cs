@@ -30,9 +30,10 @@ namespace HelloWorld
                 case 7:
                     Console.WriteLine("Sunday");
                     break;
+                default:
+                    Console.WriteLine("Yanlış Girdiniz!");
+                    break;
             }
-
-
         }
     }
 }
