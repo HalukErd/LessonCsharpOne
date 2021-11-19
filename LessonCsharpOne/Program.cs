@@ -1,53 +1,50 @@
-﻿using System;
-
-namespace HelloWorld
+﻿namespace HelloWorld
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter your age:");
-            int age = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Your age is: " + age);
+            string txt1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            Console.WriteLine("The length of the txt string is: " + txt1.Length);
 
-            //+ Addition    Adds together two values    x + y
-            //- Subtraction Subtracts one value from another x -y
-            //* Multiplication  Multiplies two values x *y
-            /// Division    Divides one value by another x / y
-            //% Modulus Returns the division remainder  x % y
-            //++  Increment Increases the value of a variable by 1  x++
-            //--  Decrement Decreases the value of a variable by 1  x--
-            int x = 0;
-            Console.WriteLine(x);
-            int firstNumber = x++;
-            Console.WriteLine(x);
-            int secondNumber = ++x;
-            Console.WriteLine(x);
+            string txtHello = "Hello World";
+            Console.WriteLine(txtHello.ToUpper());   // Outputs "HELLO WORLD"
+            Console.WriteLine(txtHello.ToLower());   // Outputs "hello world"
 
-            Console.WriteLine(firstNumber);
-            Console.WriteLine(secondNumber);   
-            //= x = 5   x = 5
-            //+= x += 3  x = x + 3
-            //-= x -= 3  x = x - 3
-            //*= x *= 3  x = x * 3
-            ///= x /= 3  x = x / 3
-            //%= x %= 3  x = x % 3
-            //&= x &= 3  x = x & 3
-            //|= x |= 3  x = x | 3
-            //^= x ^= 3  x = x ^ 3
-            //>>= x >>= 3 x = x >> 3
-            //<<= x <<= 3 x = x << 3
+            string firstName1 = "John ";
+            string lastName1 = "Doe";
+            string name1 = string.Concat(firstName1, lastName1);
+            Console.WriteLine(name1);
 
-            //== Equal to x == y
-            //!= Not equal x != y
-            //> Greater than x > y
-            //< Less than x<y
-            //>= Greater than or equal to    x >= y
-            //<= Less than or equal to   x <= y
+            string firstName = "John";
+            string lastName = "Doe";
+            string name = $"My full name is: {firstName} {lastName}";
+            Console.WriteLine(name1);
 
-            //&& Logical and Returns true if both statements are true    x < 5 && x < 10
-            //|| Logical or Returns true if one of the statements is true   x < 5 || x < 4
-            //!   Logical not Reverse the result, returns false if the result is true!(x < 5 && x < 10)
+            string myString = "Hello";
+            Console.WriteLine(myString[0]);  // Outputs "H"
+
+            Console.WriteLine(myString.IndexOf("e"));  // Outputs "1"
+
+            // Full name
+            string name3 = "John Doe";
+
+            // Location of the letter D
+            int charPos = name3.IndexOf("D");
+
+            // Get last name
+            string lastName3 = name3.Substring(charPos);
+
+            // Print the result
+            Console.WriteLine(lastName3);
+
+            //\'	'    Single quote
+            //\"	"    Double quote
+            //\\	\	Backslash
+
+            //\n New Line
+            //\t Tab	
+            //\b Backspace
         }
     }
 }
