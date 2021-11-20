@@ -6,24 +6,13 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a length: ");
-            int length = Convert.ToInt32(Console.ReadLine());
-            
-            for (int row = 0; row < length; row++)
-            {
-                for (int column = 0; column < length; column++)
-                {
-                    if (column == row || (column + row) == length - 1)
-                    {
-                        Console.Write("*");
-                    }
-                    else
-                    {
-                        Console.Write(" ");
-                    }
-                }
-                Console.WriteLine();
-            }
+            Console.WriteLine("Enter First Number: ");
+            int firstNumber = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Second Number: ");
+            int secondNumber = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Character To Select Operation: ");
+            char operationChar = Convert.ToChar(Console.ReadLine());
+
         }
     }
 }
