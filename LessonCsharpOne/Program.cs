@@ -6,8 +6,17 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Check Branches");
-
+            String password = "c1234";
+            Console.Write("Write password door: ");
+            String enteredPassword = Console.ReadLine();
+            
+            if(enteredPassword.Equals(password))
+            {
+                Console.WriteLine("Tık.");
+            } else
+            {
+                Console.WriteLine("Daat.");
+            }
         }
     }
 }
