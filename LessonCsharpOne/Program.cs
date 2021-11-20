@@ -6,13 +6,24 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter First Number: ");
-            int firstNumber = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter Second Number: ");
-            int secondNumber = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter Character To Select Operation: ");
-            char operationChar = Convert.ToChar(Console.ReadLine());
+            Console.WriteLine(factorial(5));
+        }
 
+        static int factorial(int number)
+        {
+            int result = 1;
+            for (int i = 1; i <= number; i++)
+            {
+                result *= i;
+            }
+            return result;
+        }
+
+        static int factorialRecursive(int number)
+        {
+            if(number == 1)
+                return 1;
+            return number * factorial(number - 1);
         }
     }
 }
