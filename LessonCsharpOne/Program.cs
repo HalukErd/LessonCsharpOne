@@ -8,11 +8,19 @@ namespace HelloWorld
         {
             Console.WriteLine("Enter a length: ");
             int length = Convert.ToInt32(Console.ReadLine());
+            
             for (int row = 0; row < length; row++)
             {
-                for (int column = 0; column < row; column++)
+                for (int column = 0; column < length; column++)
                 {
-                    Console.Write("*");
+                    if (column == row || (column + row) == length - 1)
+                    {
+                        Console.Write("*");
+                    }
+                    else
+                    {
+                        Console.Write(" ");
+                    }
                 }
                 Console.WriteLine();
             }
