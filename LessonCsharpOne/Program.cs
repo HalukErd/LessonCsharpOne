@@ -15,7 +15,7 @@ namespace HelloWorld
 
         static int Perm(int n, int r)
         {
-            return Factorial(n) / Factorial(n - r);
+            return FactorialRecursice(n) / FactorialRecursice(n - r);
         }
 
 
