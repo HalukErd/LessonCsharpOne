@@ -6,10 +6,20 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(factorial(5));
+            int n = 5;
+            int r = 3;
+            
+            int result = Perm(n, r);
+            Console.WriteLine(result);
         }
 
-        static int factorial(int number)
+        static int Perm(int n, int r)
+        {
+            return Factorial(n) / Factorial(n - r);
+        }
+
+
+        static int Factorial(int number)
         {
             int result = 1;
             for (int i = 1; i <= number; i++)
@@ -19,11 +29,13 @@ namespace HelloWorld
             return result;
         }
 
-        static int factorialRecursive(int number)
+        static int FactorialRecursice(int number)
         {
             if(number == 1)
+            {
                 return 1;
-            return number * factorial(number - 1);
+            }
+            return number * FactorialRecursice(number - 1);
         }
     }
 }
