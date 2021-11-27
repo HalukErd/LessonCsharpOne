@@ -49,5 +49,10 @@ namespace LessonCsharpOne
         {
             this.age = age;
         }
+
+        public void happyBirthday()
+        {
+            this.age++;
+        }
     }
 }

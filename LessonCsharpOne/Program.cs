@@ -20,6 +20,9 @@ namespace HelloWorld
             
             Console.WriteLine(personH.getName());
             Console.WriteLine(personH.getAge());
+            personH.happyBirthday();
+            Console.WriteLine(personH.getName());
+            Console.WriteLine(personH.getAge());
             
             personD.setName("Defne");
             personD.setAge(15);
