@@ -32,7 +32,7 @@ namespace LessonCsharpOne
 
         public string getName()
         {
-            return name;
+            return name.ToUpper();
         }
 
         public void setName(string name)
@@ -45,10 +45,10 @@ namespace LessonCsharpOne
             return age;
         }
 
-        public void setAge(int age)
-        {
-            this.age = age;
-        }
+        //public void setAge(int age)
+        //{
+        //    this.age = age;
+        //}
 
         public void happyBirthday()
         {
