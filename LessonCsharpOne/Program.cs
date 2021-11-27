@@ -1,60 +1,42 @@
 ﻿using System;
-
+using LessonCsharpOne;
 namespace HelloWorld
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //int[] result = GetFibonaccis(25);
-            //PrintArray(result);
-            //Console.WriteLine(isPrime(18));
+            
+            Person personD = new Person();
+            personD.setName("Defne");
+            personD.setAge(15);
+            Person personH; //int a;
+            personH = new Person(); // a = 5;
+            personH.setName("Haluk");
+            personH.setAge(28);
 
-            Console.WriteLine(sumDigits(21378));
+            Console.WriteLine(personD.getName());
+            Console.WriteLine(personD.getAge());
+            
+            Console.WriteLine(personH.getName());
+            Console.WriteLine(personH.getAge());
+            
+            personD.setName("Defne");
+            personD.setAge(15);
+
+            Person personB = new Person();
+            Console.WriteLine(personB.getName());
+            Console.WriteLine(personB.getAge());
+
+            //Person personAhmet = new Person("Ahmet", 21);
+            //Console.WriteLine(personAhmet.getName());
+            //Console.WriteLine(personAhmet.getAge());
+
+            Person personAhmet = new Person("Ahmet");
+            Console.WriteLine(personAhmet.getName());
+            Console.WriteLine(personAhmet.getAge());
+            
         }
 
-        public static int sumDigits(int number)
-        {
-            int result = 0;
-            string textOfNumber = Convert.ToString(number);
-            for (int i = 0; i < textOfNumber.Length; i++)
-            {
-                result += (int)Char.GetNumericValue(textOfNumber[i]);
-            }
-            return result;
-        }
-
-        static int[] GetFibonaccis(int size)
-        {
-            int[] result = new int[size];
-            result[0] = 0;
-            result[1] = 1;
-            for(int i = 2; i < size; i++)
-            {
-                result[i] = result[i - 1] + result[i - 2];
-            }
-            return result;
-        }
-
-        public static void PrintArray(int[] arrayToPrint)
-        {
-            foreach (int i in arrayToPrint)
-            {
-                Console.WriteLine(i);
-            }
-        }
-
-        public static bool isPrime(int number)
-        {
-            for (int i = 2; i < number/2; i++)
-            {
-                if ((number % i) ==0 )
-                {
-                    return false;
-                }
-            }
-            return true;
-
-        }
     }
 }
