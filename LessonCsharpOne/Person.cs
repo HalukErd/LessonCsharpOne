@@ -8,9 +8,24 @@ namespace LessonCsharpOne
 {
     internal class Person
     {
-        private string name;
+        private string name; // encapsulation
         private int age;
+        private TcId tcId;
 
+        public TcId TcId
+        {
+            get { return tcId; }
+            set { tcId = value; }
+        }
+        public string Name 
+        {
+            get { return name; }
+            set { name = value.ToUpper(); }
+        }
+        public int Age
+        {
+            get { return age; }
+        }
         public Person()
         {
             Console.WriteLine("Constructor çağırıldı.");
@@ -18,15 +33,22 @@ namespace LessonCsharpOne
             this.age = 0;
         }
 
-        public Person(string name)
+        public Person(string value)
         {
-            this.name = name;
+            this.name = value;
             this.age = 0;
         }
 
         public Person(string name, int age)
         {
             this.name = name;
+            this.age = age;
+        }
+
+        public Person(string name, int age, TcId tcId)
+        {
+            this.tcId = tcId;
+            Name = name;
             this.age = age;
         }
 

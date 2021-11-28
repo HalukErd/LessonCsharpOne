@@ -27,20 +27,29 @@ namespace HelloWorld
             //personD.setName("Defne");
             //personD.setAge(15);
 
-            Person personB = new Person();
-            Console.WriteLine(personB.getName());
-            Console.WriteLine(personB.getAge());
+            //Person personB = new Person();
+            //Console.WriteLine(personB.getName());
+            //Console.WriteLine(personB.getAge());
 
             //Person personAhmet = new Person("Ahmet", 21);
             //Console.WriteLine(personAhmet.getName());
             //Console.WriteLine(personAhmet.getAge());
 
-            Person personAhmet = new Person("Ahmet", 21);
-            Console.WriteLine(personAhmet.getName());
-            Console.WriteLine(personAhmet.getAge());
+            //Person personAhmet = new Person("Ahmet", 21);
+            //Console.WriteLine(personAhmet.getName());
+            //Console.WriteLine(personAhmet.getAge());
             //personAhmet.setAge(18);
-            personAhmet.happyBirthday();
-            
+            //personAhmet.happyBirthday();
+            //personAhmet.setName("Ahmet Mehmet");
+            //personAhmet.Name = "Ahmet Mehmet";
+            //personAhmet.Age = 12; // hata verir
+            //personAhmet.setAge(12); // hata verir
+            Person tcPerson = new Person("Defne", 21, new TcId("Defne", "Sağıroğlu"));
+            Console.WriteLine(tcPerson.Name);
+            Console.WriteLine(tcPerson.Age);
+            Console.WriteLine(tcPerson.TcId.TcNo);
+            Console.WriteLine(tcPerson.TcId.Name);
+            Console.WriteLine(tcPerson.TcId.LastName);
         }
 
     }
