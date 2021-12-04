@@ -14,29 +14,39 @@ namespace HelloWorld
             IEat hungryCar = new Car();
             //IEat hungryCar = new IEat(); //hatalı
             //Animal animal = new Animal(); //hatalı
-            makeAnimalSound(patiayak);
-            makeAnimalSound(haku);
-            makeAnimalSound(tweety);
-            makeAnimalSound(nagini);
+            //makeAnimalSound(patiayak);
+            //makeAnimalSound(haku);
+            //makeAnimalSound(tweety);
+            //makeAnimalSound(nagini);
 
-            makeAnimalMove(patiayak);
-            makeAnimalMove(haku);
-            makeAnimalMove(tweety);
-            makeAnimalMove(nagini);
+            //makeAnimalMove(patiayak);
+            //makeAnimalMove(haku);
+            //makeAnimalMove(tweety);
+            //makeAnimalMove(nagini);
 
-            patiayak.FoodType = "Meat";
-            haku.FoodType = "Proplan";
-            tweety.FoodType = "corn";
-            nagini.FoodType = "everything";
+            //patiayak.FoodType = "Meat";
+            //haku.FoodType = "Proplan";
+            //tweety.FoodType = "corn";
+            //nagini.FoodType = "everything";
 
-            feed(patiayak);
-            feed(haku);
-            feed(tweety);
-            feed(nagini);
-            feed(car);
-            feed(hungryCar);
+            //feed(patiayak);
+            //feed(haku);
+            //feed(tweety);
+            //feed(nagini);
+            //feed(car);
+            //feed(hungryCar);
 
-            runTime(RunTimeQuantity.PT40);
+            //runTime(RunTimeQuantity.PT40);
+            try
+            {
+                makeAnimalFly(tweety);
+                Console.WriteLine("----");
+                makeAnimalFly(nagini);
+            } catch (IndexOutOfRangeException e)
+            {
+                Console.WriteLine("Hatayi \"yakaladik.");
+                Console.WriteLine(e.Message);
+            }
         }
 
         public static void makeAnimalSound(Animal animal)
@@ -46,6 +56,37 @@ namespace HelloWorld
         public static void makeAnimalMove(Animal animal)
         {
             animal.move();
+        }
+
+        public static void makeAnimalFly(Animal animal)
+        {
+            if(animal is Bird)
+            {
+                ((Bird) animal).fly();
+            } else
+            {
+                throw new InvalidCastException(animal.Name + " can't fly");
+            }
+            //try
+            //{
+            //    Console.WriteLine("I'm thinking whether animal can fly or not");
+            //    ((Bird)animal).fly();
+            //    Console.WriteLine("Your bird can really fly.");
+            //    int[] myNum = new int[] {1,2,3};
+            //    int a = myNum[5];
+            //} 
+            //catch (IndexOutOfRangeException e)
+            //{
+            //    Console.WriteLine("IndexOutOfException aldin");
+            //} 
+            //catch (InvalidCastException e)
+            //{
+            //    Console.WriteLine(animal.Name + " cant fly. ");
+            //} 
+            //finally
+            //{
+            //    Console.WriteLine("goodBye");
+            //}
         }
         
         public static void feed(IEat hungry)
