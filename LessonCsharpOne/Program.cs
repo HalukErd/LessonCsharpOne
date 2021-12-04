@@ -6,51 +6,46 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            
-            //Person personD = new Person();
-            //personD.setName("Defne");
-            //personD.setAge(15);
-            //Person personH; //int a;
-            //personH = new Person(); // a = 5;
-            //personH.setName("Haluk");
-            //personH.setAge(28);
+            Animal patiayak = new Dog("patiayak", "karaKöpek");
+            Animal haku = new Cat("Haku", "Tekir");
+            Animal tweety = new Bird("Tweety", "Kanarya");
+            Animal nagini = new Snake("Nagini", "Piton");
+            Car car = new Car();
+            IEat hungryCar = new Car();
+            //IEat hungryCar = new IEat(); //hatalı
+            //Animal animal = new Animal(); //hatalı
+            makeAnimalSound(patiayak);
+            makeAnimalSound(haku);
+            makeAnimalSound(tweety);
+            makeAnimalSound(nagini);
 
-            //Console.WriteLine(personD.getName());
-            //Console.WriteLine(personD.getAge());
-            
-            //Console.WriteLine(personH.getName());
-            //Console.WriteLine(personH.getAge());
-            //personH.happyBirthday();
-            //Console.WriteLine(personH.getName());
-            //Console.WriteLine(personH.getAge());
-            
-            //personD.setName("Defne");
-            //personD.setAge(15);
+            makeAnimalMove(patiayak);
+            makeAnimalMove(haku);
+            makeAnimalMove(tweety);
+            makeAnimalMove(nagini);
 
-            //Person personB = new Person();
-            //Console.WriteLine(personB.getName());
-            //Console.WriteLine(personB.getAge());
-
-            //Person personAhmet = new Person("Ahmet", 21);
-            //Console.WriteLine(personAhmet.getName());
-            //Console.WriteLine(personAhmet.getAge());
-
-            //Person personAhmet = new Person("Ahmet", 21);
-            //Console.WriteLine(personAhmet.getName());
-            //Console.WriteLine(personAhmet.getAge());
-            //personAhmet.setAge(18);
-            //personAhmet.happyBirthday();
-            //personAhmet.setName("Ahmet Mehmet");
-            //personAhmet.Name = "Ahmet Mehmet";
-            //personAhmet.Age = 12; // hata verir
-            //personAhmet.setAge(12); // hata verir
-            Person tcPerson = new Person("Defne", 21, new TcId("Defne", "Sağıroğlu"));
-            Console.WriteLine(tcPerson.Name);
-            Console.WriteLine(tcPerson.Age);
-            Console.WriteLine(tcPerson.TcId.TcNo);
-            Console.WriteLine(tcPerson.TcId.Name);
-            Console.WriteLine(tcPerson.TcId.LastName);
+            feed(patiayak);
+            feed(haku);
+            feed(tweety);
+            feed(nagini);
+            feed(car);
+            feed(hungryCar);
         }
+
+        public static void makeAnimalSound(Animal animal)
+        {
+            animal.makeSound();
+        }
+        public static void makeAnimalMove(Animal animal)
+        {
+            animal.move();
+        }
+        
+        public static void feed(IEat hungry)
+        {
+            hungry.eat();
+        }
+
 
     }
 }
