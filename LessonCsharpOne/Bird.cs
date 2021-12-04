@@ -42,7 +42,7 @@ namespace LessonCsharpOne
 
         public override void eat()
         {
-            Console.WriteLine(Name + " eats birdfeed");
+            Console.WriteLine(Name + " eats " + FoodType);
         }
     }
 }

@@ -14,6 +14,7 @@ namespace LessonCsharpOne
         {
             Name = name;
             Type = type;
+            
         }
 
         public override void move() {
@@ -22,7 +23,7 @@ namespace LessonCsharpOne
 
         public override void eat()
         {
-            Console.WriteLine(Name + " eats everything");
+            Console.WriteLine(Name + " eats " + FoodType);
         }
     }
 }

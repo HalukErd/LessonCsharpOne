@@ -11,12 +11,14 @@ namespace LessonCsharpOne
         public string Name { get; set; }
         public string Type { get; set; }
         public string SoundType { get; set; }
-        
+        public string FoodType { get; set; }
 
         public void makeSound()
         {
             Console.WriteLine(Name + " sounds " + SoundType);
         }
+
+        
 
         public abstract void move();
 

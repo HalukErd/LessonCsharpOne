@@ -9,6 +9,7 @@ namespace LessonCsharpOne
     internal class Dog : Animal
     {
         public string Leg { get; set; }
+        
 
         public Dog(string name, string type)
         {
@@ -33,7 +34,7 @@ namespace LessonCsharpOne
 
         public override void eat()
         {
-            Console.WriteLine(Name + " eats meat");
+            Console.WriteLine(Name + " eats " + FoodType);
         }
     }
 }

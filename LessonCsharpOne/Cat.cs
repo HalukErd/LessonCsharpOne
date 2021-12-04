@@ -33,7 +33,7 @@ namespace LessonCsharpOne
 
         public override void eat()
         {
-            Console.WriteLine(Name + " eats proPlan");
+            Console.WriteLine(Name + " eats " + FoodType);
         }
     }
 }

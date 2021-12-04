@@ -24,12 +24,19 @@ namespace HelloWorld
             makeAnimalMove(tweety);
             makeAnimalMove(nagini);
 
+            patiayak.FoodType = "Meat";
+            haku.FoodType = "Proplan";
+            tweety.FoodType = "corn";
+            nagini.FoodType = "everything";
+
             feed(patiayak);
             feed(haku);
             feed(tweety);
             feed(nagini);
             feed(car);
             feed(hungryCar);
+
+            runTime(RunTimeQuantity.PT40);
         }
 
         public static void makeAnimalSound(Animal animal)
@@ -46,6 +53,9 @@ namespace HelloWorld
             hungry.eat();
         }
 
-
+        public static void runTime(RunTimeQuantity runTimeQuantity)
+        {
+            Console.WriteLine(runTimeQuantity.ToString());
+        }
     }
 }
